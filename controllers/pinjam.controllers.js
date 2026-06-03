@@ -281,8 +281,6 @@ export const laporanReturnBuku = async (req, res) => {
         let terlambat =
           (tanggalPengembalian - batasKembali) / (1000 * 60 * 60 * 24);
 
-          terlambat = terlambat.toFixed(2);
-
         if (terlambat < 0) {
           terlambat = 0;
         }
