@@ -278,8 +278,9 @@ export const laporanReturnBuku = async (req, res) => {
         const tanggalPengembalian = new Date(d.updated_at);
 
         // 86400000
-        let terlambat =
-          (tanggalPengembalian - batasKembali) / (1000 * 60 * 60 * 24);
+        let terlambat = Math.ceil(
+          (tanggalPengembalian - batasKembali) / (1000 * 60 * 60 * 24)
+        );
 
         if (terlambat < 0) {
           terlambat = 0;
