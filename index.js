@@ -12,6 +12,11 @@ const app=express();
 try {
     await db.authenticate();
     console.log("database ok");
+
+    (async()=>{
+await db.sync();
+})();
+    
 } catch (error) {
     console.log("belum konek",error);
 }
