@@ -279,7 +279,7 @@ export const laporanReturnBuku = async (req, res) => {
 
         // 86400000
         let terlambat =
-          (tanggalPengembalian - batasKembali) / (1000 * 60 * 60 * 24 * 30);
+          (tanggalPengembalian - batasKembali) / (1000 * 60 * 60 * 24);
 
           terlambat = terlambat.toFixed(2);
 
@@ -291,7 +291,7 @@ export const laporanReturnBuku = async (req, res) => {
           judul_buku: d.buku?.judul || "-",
           jumlah_pinjam: d.jml_pinjam + " Buku",
           tanggal_pengembalian: d.updated_at,
-          jumlah_hari_terlambat: terlambat + " Bulan",
+          jumlah_hari_terlambat: terlambat + " Hari",
         };
       }),
     }));
