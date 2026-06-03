@@ -13,9 +13,8 @@ try {
     await db.authenticate();
     console.log("database ok");
 
-    (async()=>{
-await db.sync();
-})();
+    await db.sync();
+    console.log("database synced");
     
 } catch (error) {
     console.log("belum konek",error);
