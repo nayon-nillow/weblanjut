@@ -273,7 +273,7 @@ export const laporanReturnBuku = async (req, res) => {
       buku: (p.detail_pinjams || []).map((d) => {
 
         const batasKembali = new Date(p.tanggal_kembali);
-        const tanggalPengembalian = new Date(p.tanggal_pinjam);
+        const tanggalPengembalian = new Date(d.updated_at);
 
         // 86400000
         let terlambat =
