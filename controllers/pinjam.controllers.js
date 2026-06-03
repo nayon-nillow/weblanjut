@@ -200,12 +200,14 @@ export const returnBuku = async (req, res) => {
             buku_id: detail.buku_id,
             jml_pinjam: item.jml_kembali,
             status: 2,
+            updated_at: new Date(),
           });
 
           // update sisa pinjaman dari row pertama
           await DetailPinjams.update(
             {
               jml_pinjam: detail.jml_pinjam - item.jml_kembali,
+              updated_at: new Date(),
             },
             {
               where: {
