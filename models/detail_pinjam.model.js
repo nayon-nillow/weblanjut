@@ -25,15 +25,12 @@ const DetailPinjams = db.define(
         status: {
             type: DataTypes.INTEGER,
         },
-        created_at: {
-            type: DataTypes.DATE,
-        },
-        updated_at: {
-            type: DataTypes.DATE,
-        },
     },
     {
         freezeTableName: true,
+        timestamps: true,
+  createdAt: "created_at",
+  updatedAt: "updated_at",
     }
 );
 
