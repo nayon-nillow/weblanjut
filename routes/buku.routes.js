@@ -14,8 +14,8 @@ const router = express.Router();
 
 router.get("/", authenticateToken, getAllProducts);
 router.post("/", authenticateToken, tambahbukubaru);
-router.get("/:id", cariBukuByID);
-router.patch("/:id", updateBuku);
-router.delete("/:id", deleteBuku);
+router.get("/:id", authenticateToken, cariBukuByID);
+router.patch("/:id", authenticateToken, updateBuku);
+router.delete("/:id", authenticateToken, deleteBuku);
 
 export default router;
