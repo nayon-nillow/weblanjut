@@ -1,14 +1,15 @@
  import { Sequelize } from "sequelize";
  import mysql2 from "mysql2";
- const db = new Sequelize('bukumahapro', 'root', '', {
-     host: "localhost",
+ const db = new Sequelize('bukumahapro', 'avnadmin', 'AVNS_39mweOMP94ZjmkVbaQP', {
+     host: "mysql-3b3a52ce-weblanjut12.h.aivencloud.com",
      dialect: "mysql",
+     port: 23415
       "define": {
         "timestamps": false
       }
     });
 export default db;
 
-(async()=>{
+/*(async()=>{
 await db.sync();
-})();
+})();*/
