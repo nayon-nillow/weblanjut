@@ -28,6 +28,6 @@ app.use('/api/mahasiswa',mahasiswas);
 app.use('/api/prodi',prodis);
 app.use('/api/pinjam',pinjams);
 app.use('/api/detail_pinjam',detail_pinjams);
-app.use('/api/user',Users);
+app.use('/api/user',users);
 
 app.listen(5000);
