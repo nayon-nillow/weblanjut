@@ -5,7 +5,7 @@ import mahasiswas from "./routes/mahasiswa.routes.js"
 import prodis from "./routes/prodi.routes.js"
 import pinjams from "./routes/pinjam.routes.js"
 import detail_pinjams from "./routes/detail_pinjam.routes.js";
-import Users from "./routes/user.routes.js";
+import users from "./routes/user.routes.js";
 import cors from "cors";
 
 const app=express();
